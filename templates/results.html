@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Assassin | Reorder Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-800 min-h-screen flex flex-col items-center py-10 font-sans text-gray-800">
+
+    <div class="w-full max-w-4xl bg-white shadow-lg rounded-xl p-8">
+        
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold text-gray-900">Inventory Reorder Analysis</h1>
+            <a href="/" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow transition duration-150">
+                Upload New File
+            </a>
+        </div>
+
+        <div class="mb-8 border-l-4 border-blue-600 bg-blue-50 p-5 rounded-r-lg">
+            <div class="flex items-center mb-2">
+                <svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                <h3 class="text-lg font-bold text-blue-900">Gemini Intelligence Summary</h3>
+            </div>
+            <p class="text-blue-800 text-sm leading-relaxed">
+                {{ summary }}
+            </p>
+        </div>
+
+        <div>
+            <h3 class="text-lg font-bold text-gray-700 mb-4 border-b pb-2">Critical Stock Levels (Below Threshold)</h3>
+            <div class="overflow-x-auto">
+                <div class="[&>table]:w-full [&>table]:text-left [&>table]:border-collapse [&>table>thead>tr>th]:bg-gray-100 [&>table>thead>tr>th]:p-3 [&>table>thead>tr>th]:font-semibold [&>table>thead>tr>th]:text-gray-600 [&>table>thead>tr>th]:border-b-2 [&>table>tbody>tr>td]:p-3 [&>table>tbody>tr>td]:border-b [&>table>tbody>tr]:transition-colors [&>table>tbody>tr:hover]:bg-gray-50">
+                    {{ table | safe }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
